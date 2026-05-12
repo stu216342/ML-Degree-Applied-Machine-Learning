@@ -26,3 +26,25 @@ Approaches or solutions that have been tried before on similar projects.
   - **Methods**: Transfer Learning (hugging face transformers and fastai libs). It adapts the pretrained English weights to the Portuguese vocabulary through a specific localization pipeline.
   - **Outcomes**: Produced model is capable of generating Port. text, which can be adapted for translation tasks.
   - **Relation to the Project**: This could be a presentation of how to apply finetuning. 
+
+
+- **Source 4**: A Performance Evaluation of a Quantized Large Language Model on Various Smartphones
+
+  - **[arxiv](https://arxiv.org/html/2312.12472v1)**
+  - **Objective**: Evaluate inference performance of a quantized LLM across several iphone models
+  - **Methods**: Benchmark sampling, prompt decoding, and token generation rates using a standardized prompt across different smartphones and quantization levels.
+  - **Outcomes**: "recent iPhone generations possess the hardware capacity to run on-device LLMs, achieving sustained performance requires further advancements in power management and system integration"
+  - **Relation to the Project**: The paper used a quantized 7B model somewhat successfully which gives us an upper limit for our older phone models 
+
+- **Source 5**: Challenging GPU Dominance: When CPUs Outperform for On-Device LLM Inference
+
+  - **[arxiv](https://arxiv.org/pdf/2505.06461)**
+  - **Objective**: Test the common assumption that GPU/Metal inference is always faster than CPU on mobile devices.
+  - **Methods**: Deploy models from 0.5B to 8B parameters via llama.cpp on an iPhone 15 Pro under varying precision and hardware configurations.
+  - **Outcomes**: For sub-1B models, multi-threaded CPU inference achieves up to 1.33× speedup over GPU; realized 17 tok/s on a 1B model
+  - **Relation to the Project**: Since 10-20 tok/s seem fast enough for translation tasks this paper gives us an idea about realistic model sizes
+
+- **Source 6**: Challenging GPU Dominance: When CPUs Outperform for On-Device LLM Inference
+
+  - **[Awesome Mobile LLMs](https://github.com/stevelaskaridis/awesome-mobile-llm)**
+  - Curated index of academic papers, frameworks, and tools for running LLMs on mobile and edge devices
